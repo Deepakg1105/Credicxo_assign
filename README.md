@@ -1,5 +1,10 @@
 # credicxo_assignment_task
 
+<p float="left">
+<img src="https://github.com/Deepakg1105/Credicxo_assign/blob/main/Screenshot_1656527304.png" alt="When No Internet" width="200"/>
+<img src="https://github.com/Deepakg1105/Credicxo_assign/blob/main/Screenshot_1656527312.png" alt="Music Track" width="200"/>
+</p>
+
 A new Flutter project.
 
 ## Getting Started
