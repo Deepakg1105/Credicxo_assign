@@ -43,7 +43,51 @@ class _TrackLyricsState extends State<TrackLyrics> {
             return Text("No data");
           }
           if ("${con.data}" == "ConnectivityResult.none") {
-            return Center(child: Text("No Internet Connection"));
+            return Container(
+                color: Colors.white,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.3,
+                    ),
+                    CircleAvatar(
+                      radius: 50.0,
+                      backgroundColor: Colors.grey.shade300,
+                      child: Icon(
+                        Icons.wifi_off_outlined,
+                        color: Colors.black,
+                        size: 50.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 16.0,
+                        bottom: 8.0,
+                      ),
+                      child: Text(
+                        'You\'re offline!',
+                        style: TextStyle(
+                          fontSize: 30.0,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 80.0),
+                      child: Text(
+                        'Check your connection and try again when you\'re back online',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                      ),
+                    ),
+                    Expanded(
+                      child: SizedBox(),
+                    ),
+                  ],
+                ));
           }
           return StreamBuilder(
             stream: trackbloc.apistream,
